@@ -1,15 +1,22 @@
-# ASCII bad apple
-Yet another bad apple script
+# Ansciier
+Mimic video or image to your terminal
 
-## Prerequisite
-- [Python 3.x](https://www.python.org/downloads/)
-- [ffmpeg](https://ffmpeg.org/download.html)
+## Overview
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/59413417/129385066-df1d222b-9233-48fd-b193-4f8497341222.gif)
 
-## How to run it
-1. Extract all the frames in [frames](./frames) folder with ffmpeg:  
-  `$ ffmpeg -i ./video.mkv -s 480x360 -sws_flags neighbor ./frames/%0d.jpg`
-2. Install pipenv if you don't have it: `$ python -m pip install pipenv`
-3. Install required dependencies with pipenv: `$ pipenv install`
-4. Run the script with python: `$ pipenv run python ./src/main.py`
+## How to use it
+1. First you need [python 3][python], I reccomend the latest version but I think it would run on older version too.
+2. Install the package with `$ pip install ansciier` or `pip3` if pip is point to python 2 version.
+3. Run it with `$ ansciier /path/to/image-or-video.mp4`.
+4. Type `$ ansciier -h` for help.
 
+## Example usage
+- `$ ansciier ~/Videos/rickroll.mp4 --aspect-ratio 20:9 --fps 24`  
+Command above will draw frame from rickroll.mp4 in Videos folder with aspect ratio of 20:9 and max fps at 24
 
+- `$ ansciier ~/Video/frame{0}.png --ascii --char @ --dim 200x50 --start-frame 59`  
+This command will draw image with `@` character, 200x50 square block dimension from frame59.png, frame60.png, until it reaches the highest frame number. It'll automatically find the last frame when `--last-frame` is not specified, it'll still continue if a frame is missing.
+
+- `$ ansciier camera` will use your camera
+
+[python]: https://www.python.org/downloads/release/python-396/
