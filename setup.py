@@ -1,6 +1,3 @@
-from io import StringIO
-from os import read
-from posixpath import split
 from setuptools import setup, find_packages
 from pathlib import Path
 from src.ansciier import __version__
