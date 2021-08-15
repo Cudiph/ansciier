@@ -5,7 +5,7 @@ from pathlib import Path
 from .Ansciier import Ansciier
 from .options import parse_args
 
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 
 def main():
     def exists(path: Path, start_frame: int) -> bool:
