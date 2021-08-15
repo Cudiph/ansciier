@@ -61,7 +61,7 @@ def main():
     elif not exists(PIC_PATH, START_FRAME):
         print('File doesn\'t exist')
 
-        if truthy(input('Do you want to use camera? ')):
+        if truthy(input('Do you want to use camera? [Y/n]')):
             ansciier.draw_from_vid(True)
         else:
             print('OK.')
