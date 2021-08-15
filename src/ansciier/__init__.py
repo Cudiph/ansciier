@@ -5,7 +5,7 @@ from pathlib import Path
 from .Ansciier import Ansciier
 from .options import parse_args
 
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 
 def main():
     def exists(path: Path, start_frame: int) -> bool:
@@ -61,7 +61,7 @@ def main():
     elif not exists(PIC_PATH, START_FRAME):
         print('File doesn\'t exist')
 
-        if truthy(input('Do you want to use camera? ')):
+        if truthy(input('Do you want to use camera? [Y/n]')):
             ansciier.draw_from_vid(True)
         else:
             print('OK.')

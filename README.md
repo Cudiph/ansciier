@@ -2,7 +2,7 @@
 Mimic video or image to your terminal
 
 ## Overview
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/59413417/129385066-df1d222b-9233-48fd-b193-4f8497341222.gif)
+![demo](https://user-images.githubusercontent.com/59413417/129385066-df1d222b-9233-48fd-b193-4f8497341222.gif)
 
 ## How to use it
 1. First you need [python 3][python], I reccomend the latest version but I think it would run on older version too.
@@ -18,5 +18,7 @@ Command above will draw frame from rickroll.mp4 in Videos folder with aspect rat
 This command will draw image with `@` character, 200x50 square block dimension from frame59.png, frame60.png, until it reaches the highest frame number. It'll automatically find the last frame when `--last-frame` is not specified, it'll still continue if a frame is missing.
 
 - `$ ansciier camera` will use your camera
+
+Note : Support only truecolor terminal (Because majority of terminals nowadays are truecolor I think you already have one).
 
 [python]: https://www.python.org/downloads/release/python-396/
