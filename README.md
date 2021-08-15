@@ -21,4 +21,6 @@ This command will draw image with `@` character, 200x50 square block dimension f
 
 Note : Support only truecolor terminal (Because majority of terminals nowadays are truecolor I think you already have one).
 
+Should work on Windows and Linux
+
 [python]: https://www.python.org/downloads/release/python-396/
