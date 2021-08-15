@@ -8,6 +8,10 @@ from .options import parse_args
 __version__ = '1.0.1'
 
 def main():
+    # will enable color on windows terminal
+    if os.name == 'nt':
+        os.system("")
+        
     def exists(path: Path, start_frame: int) -> bool:
         if '{0}' not in str(path):
             return os.path.exists(path)
