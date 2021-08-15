@@ -1,5 +1,6 @@
 # Ansciier
 Mimic video or image to your terminal
+Work on Windows and Linux
 
 ## Overview
 ![demo](https://user-images.githubusercontent.com/59413417/129385066-df1d222b-9233-48fd-b193-4f8497341222.gif)
