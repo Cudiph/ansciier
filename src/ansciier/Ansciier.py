@@ -78,7 +78,7 @@ class Ansciier:
         aspect_ratio = self.params.get('aspect_ratio')
         dim = self.params.get('dimension')
         width = None
-        height = tsize.lines
+        height = tsize.lines - 3 if tsize.lines > 3 else tsize.lines
 
         if dim: # dimension
             width = dim[0]
@@ -89,7 +89,7 @@ class Ansciier:
             width = int(height * frame.shape[1] / frame.shape[0])
 
         resized = cv.resize(frame, (width, height))
-        pixel = '\n' * tsize.lines
+        pixel = '\033[H'
         for row in range(resized.shape[0]):
             for col in range(resized.shape[1]):
                 if self.params.get('ascii'):
@@ -122,7 +122,7 @@ class Ansciier:
                 while time.time() * 1000 < prev_time + delay:
                     pass
 
-                print(ascii_pixel)
+                print(ascii_pixel, end='')
 
                 # debugging purpose
                 if self.params.get('verbose'):
@@ -156,7 +156,7 @@ class Ansciier:
                 while time.time() * 1000 < prev_time + delay:
                     pass
 
-                print(ascii_pixel) # print to terminal
+                print(ascii_pixel, end='') # print to terminal
 
                 # debugging purpose
                 if self.params.get('verbose'):
