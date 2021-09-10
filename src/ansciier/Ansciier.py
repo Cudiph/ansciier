@@ -38,8 +38,8 @@ class Ansciier:
 
     @staticmethod
     def colorize(text: str,
-                 fgBGR: tuple[int, int, int] = None,
-                 bgBGR: tuple[int, int, int] = None) -> str:
+                 fgBGR = None,
+                 bgBGR = None) -> str:
         # BGR is Blue, Green, Red
         colored_text = ''
 
