@@ -5,7 +5,7 @@ from pathlib import Path
 from .Ansciier import Ansciier
 from .options import parse_args
 
-__version__ = '1.2.0'
+__version__ = '1.2.1'
 
 def main():
     # will enable color on windows terminal
